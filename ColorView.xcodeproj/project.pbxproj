@@ -12,7 +12,7 @@
 		CDD27D6E2808B3A200F5211B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD27D6D2808B3A200F5211B /* Assets.xcassets */; };
 		CDD27D712808B3A200F5211B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD27D702808B3A200F5211B /* Preview Assets.xcassets */; };
 		CDD27D782808B70300F5211B /* ViewForColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD27D772808B70300F5211B /* ViewForColor.swift */; };
-		CDD27D7A2808BE4C00F5211B /* SliderAndText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD27D792808BE4C00F5211B /* SliderAndText.swift */; };
+		CDD27D802809F9E300F5211B /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD27D7F2809F9E300F5211B /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,7 @@
 		CDD27D6D2808B3A200F5211B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDD27D702808B3A200F5211B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CDD27D772808B70300F5211B /* ViewForColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForColor.swift; sourceTree = "<group>"; };
-		CDD27D792808BE4C00F5211B /* SliderAndText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderAndText.swift; sourceTree = "<group>"; };
+		CDD27D7F2809F9E300F5211B /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 				CDD27D692808B39F00F5211B /* ColorViewApp.swift */,
 				CDD27D6B2808B39F00F5211B /* ContentView.swift */,
 				CDD27D772808B70300F5211B /* ViewForColor.swift */,
-				CDD27D792808BE4C00F5211B /* SliderAndText.swift */,
+				CDD27D7F2809F9E300F5211B /* SliderView.swift */,
 				CDD27D6D2808B3A200F5211B /* Assets.xcassets */,
 				CDD27D6F2808B3A200F5211B /* Preview Content */,
 			);
@@ -144,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDD27D6C2808B39F00F5211B /* ContentView.swift in Sources */,
-				CDD27D7A2808BE4C00F5211B /* SliderAndText.swift in Sources */,
+				CDD27D802809F9E300F5211B /* SliderView.swift in Sources */,
 				CDD27D6A2808B39F00F5211B /* ColorViewApp.swift in Sources */,
 				CDD27D782808B70300F5211B /* ViewForColor.swift in Sources */,
 			);
