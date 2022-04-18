@@ -1,4 +1,6 @@
 # RGBView
 SwiftUI
 
-<img width="352" alt="Снимок экрана 2022-04-17 в 00 19 17" src="https://user-images.githubusercontent.com/97124792/163691651-11ca1701-3b94-42d8-80b5-64e22cfe128c.png">
+
+<img width="322" alt="Снимок экрана 2022-04-19 в 01 16 25" src="https://user-images.githubusercontent.com/97124792/163886750-6757547c-d856-4d0c-83e<img width="322" alt="Снимок экрана 2022-04-19 в 01 17 08" src="https://user-images.githubusercontent.com/97124792/163886757-8526767b-3aa1-47f4-9ce1-cf163a40f796.png">
+1-b2d37c0dadc5.png">
