@@ -12,25 +12,34 @@ struct ContentView: View {
     @State private var greenSlider = Double.random(in: 0...255)
     @State private var blueSlider = Double.random(in: 0...255)
     
-//    @State private var redTFValue = ""
+    @FocusState private var isInputActive: Bool
     
     var body: some View {
-        ZStack() {
-            Color(.gray)
-                .ignoresSafeArea()
-            VStack(spacing: 40) {
-                ViewForColor(red: redSlider, green: greenSlider, blue: blueSlider)
-                VStack {
-                    SliderView(sliderValue: $redSlider, color: .red)
-                    SliderView(sliderValue: $greenSlider, color: .green)
-                    SliderView(sliderValue: $blueSlider, color: .blue)
-//                    TextField("0", text: $redTFValue) { _ in
-//                        redSlider = Double(redTFValue) ?? 0
-//                    }
+        NavigationView {
+            ZStack() {
+                Color(.gray)
+                    .ignoresSafeArea()
+                VStack(spacing: 40) {
+                    ColorView(red: redSlider, green: greenSlider, blue: blueSlider)
+                    VStack {
+                        SliderView(sliderValue: $redSlider, color: .red)
+                        SliderView(sliderValue: $greenSlider, color: .green)
+                        SliderView(sliderValue: $blueSlider, color: .blue)
+                    }
+                    .frame(height: 150)
+                    .focused($isInputActive)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            Button("Done") {
+                                isInputActive = true
+                            }
+                        }
+                    }
+                    Spacer()
                 }
-                Spacer()
+                .padding()
             }
-            .padding()
         }
     }
 }
