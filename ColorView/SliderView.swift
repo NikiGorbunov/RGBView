@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SliderView: View {
     @Binding var sliderValue: Double
+    @State private var textValue = ""
     
     let color: Color
     
@@ -17,13 +18,22 @@ struct SliderView: View {
             Text("\(lround(sliderValue))")
             Slider(value: $sliderValue, in: 0...255, step: 1)
                 .tint(color)
+                .onChange(of: sliderValue) { isOnFocus in
+                textValue = "\(lround(isOnFocus))"
+            }
+            ColorValueTFView(textValue: $textValue, value: $sliderValue)
         }
-        .padding()
+        .onAppear {
+            textValue = "\(lround(sliderValue))"
+        }
     }
 }
 
 struct SliderView_Previews: PreviewProvider {
     static var previews: some View {
-        SliderView(sliderValue: .constant(1), color: .blue)
+        ZStack {
+            Color.gray
+            SliderView(sliderValue: .constant(50), color: .blue)
+        }
     }
 }

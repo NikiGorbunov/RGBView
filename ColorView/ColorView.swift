@@ -1,5 +1,5 @@
 //
-//  ViewForColor.swift
+//  ColorView.swift
 //  ColorView
 //
 //  Created by Никита Горбунов on 14.04.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ViewForColor: View {
+struct ColorView: View {
     let red: Double
     let green: Double
     let blue: Double
@@ -28,8 +28,8 @@ struct ViewForColor: View {
     }
 }
 
-struct ViewForColor_Previews: PreviewProvider {
+struct ColorView_Previews: PreviewProvider {
     static var previews: some View {
-        ViewForColor(red: 200, green: 250, blue: 25)
+        ColorView(red: 200, green: 250, blue: 25)
     }
 }
