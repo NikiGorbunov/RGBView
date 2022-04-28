@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var greenSlider = Double.random(in: 0...255)
     @State private var blueSlider = Double.random(in: 0...255)
     
-    @FocusState private var isInputActive: Bool
+    @FocusState private var focusedField: Field?
     
     var body: some View {
         NavigationView {
@@ -23,16 +23,24 @@ struct ContentView: View {
                     ColorView(red: redSlider, green: greenSlider, blue: blueSlider)
                     VStack {
                         SliderView(sliderValue: $redSlider, color: .red)
+                            .focused($focusedField, equals: .red)
                         SliderView(sliderValue: $greenSlider, color: .green)
+                            .focused($focusedField, equals: .green)
                         SliderView(sliderValue: $blueSlider, color: .blue)
+                            .focused($focusedField, equals: .blue)
                     }
                     .frame(height: 150)
-                    .focused($isInputActive)
                     .toolbar {
                         ToolbarItemGroup(placement: .keyboard) {
+                            Button(action: previousField) {
+                                Image(systemName: "chevron.up")
+                            }
+                            Button(action: nextField) {
+                                Image(systemName: "chevron.down")
+                            }
                             Spacer()
                             Button("Done") {
-                                isInputActive = true
+                                focusedField = nil
                             }
                         }
                     }
@@ -40,7 +48,46 @@ struct ContentView: View {
                 }
                 .padding()
             }
+            .onTapGesture {
+                focusedField = nil
+            }
         }
+    }
+    
+    
+    private func nextField() {
+        switch focusedField {
+        case .red:
+            focusedField = .green
+        case .green:
+            focusedField = .blue
+        case .blue:
+            focusedField = .red
+        case .none:
+            focusedField = nil
+        }
+    }
+    
+    private func previousField() {
+        switch focusedField {
+        case .red:
+            focusedField = .blue
+        case .green:
+            focusedField = .red
+        case .blue:
+            focusedField = .green
+        case .none:
+            focusedField = nil
+        }
+    }
+}
+
+
+extension ContentView {
+    enum Field {
+        case red
+        case green
+        case blue
     }
 }
 
